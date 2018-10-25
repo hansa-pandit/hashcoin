@@ -1,0 +1,31 @@
+/* Primary container rules
+=======================================*/
+
+.container-fluid {
+  display: block;
+  position: relative;
+  padding: 0;
+  max-width: 1680px;
+  margin: 0 auto;
+
+  header,
+  main,
+  footer {
+    display: block;
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 1680px;
+    }
+  }
+
+  main {
+    @include rem("min-height", 300px);
+
+    @include media-breakpoint-up(lg) {
+      @include rem("min-height", 500px);
+    }
+  }
+}

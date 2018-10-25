@@ -1,0 +1,115 @@
+#block-steps {
+  @include rem('padding', 75px 0);
+  @include media-breakpoint-up("lg") {
+    @include rem('padding', 150px 0);
+  }
+
+  background: $light-grey;
+  .field--name-field-steps {
+    @include create-container;
+    display: flex;
+    @include media-breakpoint-down("md") {
+      flex-wrap: wrap;
+    }
+    > .field__item {
+      @include rem('padding', 0 10px);
+      @include rem('margin-bottom', 130px);
+
+      flex: 1 1 100%;
+      position: relative;
+      text-align: center;
+
+      @include media-breakpoint-up("md") {
+        flex: 1 1 33%;
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        .fontawesome-icon {
+          color: $pink;
+        }
+        &:after {
+          background: url('../compress-images/arrow-pink.png')no-repeat;
+          background-size: 100%;
+          background-position: center center;
+
+        }
+      }
+      &:nth-child(2){
+        .fontawesome-icon {
+          color: $coral;
+        }
+        &:after {
+          background: url('../compress-images/arrow-coral.png')no-repeat;
+          background-size: 100%;
+          background-position: center center;
+          transform: rotateX(180deg);
+
+          @include media-breakpoint-down("sm") {
+            transform: rotateX(180deg) rotateZ(-90deg);
+          }
+
+          @include media-breakpoint-up("md") {
+            @include rem('top', 70px);
+          }
+
+        }
+      }
+      &:last-child{
+        margin-bottom: 0;
+        .fontawesome-icon {
+          color: $yellow;
+        }
+        &:after {
+
+          display: none;
+
+        }
+      }
+      &:after {
+        @include rem('height', 35px);
+        @include rem('top', 55px);
+
+        content: ' ';
+        position: absolute;
+        left: calc(50% + 85px);
+        width: calc(100% - 170px);
+        @include media-breakpoint-down("sm") {
+          @include rem('width', 120px);
+          @include rem('height', 15px);
+          @include rem('bottom', -60px);
+
+          transform: rotate(90deg);
+          top: auto;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .fontawesome-icons {
+    @include rem('width', 160px);
+    @include rem('height', 160px);
+
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px dashed $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .fontawesome-icon {
+    @include rem('font-size', 38px);
+  }
+  .field--name-field__title {
+    @include hc-title-h4($black);
+    @include rem('margin', 30px auto 5px);
+
+    text-transform: capitalize;
+  }
+  .field--name-field__description {
+    margin: 0;
+  }
+}

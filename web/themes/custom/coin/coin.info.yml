@@ -1,0 +1,29 @@
+name: coin
+type: theme
+base theme: classy
+description: 'Demo custom theme for hashcoin.'
+package: custom
+core: 8.x
+libraries:
+libraries:
+  - core/jquery
+  - coin/preloader
+  - core/drupal
+  - core/drupalSettings
+  - coin/global_styles
+  - coin/slick
+  - coin/fonts
+
+
+regions:
+  header_top: 'Header top'
+  header_bottom: 'Header Bottom'
+  main_top: 'Main top'
+  content: 'Content'
+  left_sidebar: 'Left sidebar'
+  right_sidebar: 'Right sidebar'
+  footer_one: 'Footer One'
+  footer_two: 'Footer Two'
+  footer_three: 'Footer Three'
+  footer_bottom: 'Footer Bottom'
+logo: images/logo.png

@@ -1,0 +1,32 @@
+@mixin hc-button($background: $pink) {
+  @include rem('min-width', 160px);
+  @include rem('padding', 15px 30px);
+  @include rem('border-radius', 30px)
+  text-transform: uppercase;
+  color: $white;
+  background: $background;
+  text-align: center;
+  font-weight: $boldest-font;
+  transition: $transition;
+  letter-spacing: 2px;
+  @if $background== $coral {
+    &:hover {
+      background: $yellow;
+    }
+  }
+  @if $background== $pink {
+    &:hover {
+      background: $yellow;
+    }
+  }
+  @if $background== $yellow {
+    &:hover {
+      background: $pink;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    @include rem('padding', 20px 40px);
+    @include rem('min-width', 200px);
+
+  }
+}

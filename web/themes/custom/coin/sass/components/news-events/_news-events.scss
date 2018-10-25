@@ -1,0 +1,262 @@
+.block-views-blocknews-and-events-block-1 {
+  @include create-container;
+  @include rem('padding', 75px 5px 0 5px);
+
+  @include media-breakpoint-up(lg) {
+    @include rem('padding', 150px 0 150px 0);
+
+  }
+  h2 {
+    @include hc-title-h3($black);
+    @include rem('margin', 15px 5px 0 5px);
+
+    text-align: center;
+    text-transform: capitalize;
+    &:before {
+      @include title-prefix();
+      @include rem('margin', -15px auto 0);
+
+      content: 'Our Blog';
+      text-transform: uppercase;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+  }
+  .slick-slider {
+    @include rem('padding', 75px 0);
+    .disabled {
+      color: $light-grey;
+      &:hover {
+        color: $light-grey;
+      }
+
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 22px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 50%;
+    cursor: pointer;
+    line-height: .8;
+    font-weight: $bold;
+    text-transform: uppercase;
+    color: $grey-text;
+    transition: $transition;
+
+    &:hover {
+      color: $pink;
+      transition: $transition;
+    }
+  }
+  .slick-arrow-next {
+    left: 100px;
+  }
+  .slick-arrow-prev {
+    right: 100px;
+  }
+
+  .views-row {
+    width: 100%;
+  }
+  .views-field-nothing {
+    padding: 0 15px;
+  }
+
+  .slick-slide {
+    &:nth-child(3n + 1) {
+      .hc-blogs__icon-link {
+        a {
+          background: $pink;
+          &:hover{
+            color: $white;
+            background: $yellow;
+
+          }
+        }
+      }
+
+      a {
+        transition: $transition;
+        &:hover {
+          color: $pink;
+          transition: $transition;
+        }
+      }
+    }
+    &:nth-child(3n + 2) {
+
+      .hc-blogs__icon-link {
+        a {
+          background: $coral;
+          &:hover{
+            color: $white;
+            background: $yellow;
+
+          }
+        }
+      }
+      a {
+        transition: $transition;
+        &:hover {
+          color: $coral;
+          transition: $transition;
+
+        }
+      }
+    }
+    &:nth-child(3n + 3) {
+
+      .hc-blogs__icon-link {
+        a {
+          background: $yellow;
+          &:hover{
+            color: $white;
+            background: $pink;
+
+          }
+        }
+      }
+      a {
+        transition: $transition;
+        &:hover {
+          color: $yellow;
+          transition: $transition;
+        }
+      }
+    }
+  }
+  .hc-blogs {
+    &__wrapper {
+      @include rem('max-width', 360px);
+      width: 100%;
+      position: relative;
+      border: 1px solid $border-grey;
+      text-align: center;
+
+      @include media-breakpoint-down(md) {
+        margin: 0 auto;
+      }
+    }
+    &__image {
+      @include rem('height', 200px);
+      background-position: center center;
+      background-size: cover;
+
+      @include media-breakpoint-up(up) {
+        @include rem('height', 260px);
+      }
+      @include media-breakpoint-up(lg) {
+        @include rem('height', 360px);
+
+      }
+    }
+    &__icon-link {
+      text-align: center;
+      position: relative;
+      a {
+        @include rem('width', 60px);
+        @include rem('height', 60px);
+        @include rem('margin-bottom', 10px);
+
+        @include rem('font-size', 22px);
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: -30px auto 0 auto;
+
+        background: $pink;
+        border-radius: 50%;
+        vertical-align: middle;
+        color: $white;
+        line-height: 2.8;
+      }
+    }
+    &__title-description {
+      @include rem('padding', 0 40px);
+      @include rem('margin', 50px auto );
+    }
+    &__title {
+      @include rem('margin-bottom', 20px );
+
+      a {
+        @include hc-title-h4($black);
+      }
+    }
+
+
+    &__teaser-description {
+      @include rem('font-size', 16px);
+
+      line-height: 1.8;
+
+    }
+    &__details {
+      display: flex;
+      border-top: 1px solid $border-grey;
+      text-align: center;
+      div {
+        padding: 30px 0;
+        @include rem('font-size', 14px);
+        text-transform: uppercase;
+        flex: 1 1 auto;
+        font-weight: $bold;
+        color: $black;
+        position: relative;
+
+        &:nth-child(2) {
+          border-left: 1px solid $border-grey;
+          border-right: 1px solid $border-grey;
+
+        }
+
+        a {
+          font-weight: $bold;
+          color: $black;
+        }
+
+        &:before {
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          font-size: 55px;
+          position: absolute;
+          top: 50%;
+          z-index: -1;
+          text-align: center;
+          color: $light-grey-text;
+          font-weight: $boldest-font;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    &__author {
+      &:before {
+        content: "BY";
+
+      }
+    }
+    &__date {
+      &:before {
+        content: "ON";
+
+      }
+    }
+    &__type {
+      &:before {
+        content: "IN";
+      }
+    }
+  }
+  .draggable {
+    width: calc(100% - 60px);
+    margin: 0 auto;
+  }
+}

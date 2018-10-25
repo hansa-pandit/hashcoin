@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Bartik theme.
+ */
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Entity;
+use Drupal\block\Entity\Block;
+use Drupal\Component\Render\FormattableMarkup;
+/*
+function coin_form_search_block_form_alter(&$form, &$form_state) {
+  $form['keys']['#attributes']['placeholder'][] = t('');
+  $value = new FormattableMarkup('<i class="fas fa-google">hansa</i>@text', ['@text' => '',]);
+
+  $form['actions']['submit']['#value'] = $value;
+}*/
+
+
+function coin_form_search_block_form_alter(&$form, &$form_state) {
+  $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+  $form['actions']['submit']['#attributes']['class'][] = 'search-button';
+}

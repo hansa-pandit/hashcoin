@@ -1,0 +1,54 @@
+@mixin hc-heading {
+  font-family: $raleway;
+  font-weight: $semibold;
+  text-transform: none;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@mixin hc-title-h2($color: $white) {
+  @include hc-heading;
+
+  font-weight: $bold;
+
+  @include rem("font-size", 54px);
+
+  @include media-breakpoint-up("md") {
+    @include rem("font-size", 80px);
+  }
+
+  @include media-breakpoint-up("lg") {
+    @include rem("font-size", 100px);
+  }
+
+  color: $color;
+}
+@mixin hc-title-h3($color: $black) {
+  @include hc-heading;
+
+  @include rem("font-size", 36px);
+
+  @include media-breakpoint-up("lg") {
+    @include rem("font-size", 48px);
+  }
+
+  color: $color;
+}
+
+@mixin hc-title-h4($color: $black) {
+  @include hc-heading;
+
+  @include rem("font-size", 24px);
+
+  color: $color;
+}
+
+@mixin title-prefix() {
+  @include rem("font-size", 14px);
+  @include rem("letter-spacing", 2px);
+  @include rem("margin-bottom", 8px);
+  font-family: $raleway;
+  font-weight: $extrabold;
+  color: $pink;
+  text-transform: uppercase;
+}

@@ -1,0 +1,34 @@
+.block-views-blockpartners-block-1 {
+  @include rem('padding', 50px);
+
+}
+.view-partners {
+  /*
+  @include create-container;
+  */
+
+  .draggable {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+
+  .slick-slide {
+    opacity: .2;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+      opacity: 1;
+      transition: $transition;
+    }
+    img {
+      margin: 0 auto;
+    }
+  }
+  .slick-center {
+    opacity: 1;
+  }
+
+  .views-field-field-partner-image {
+    @include rem('padding', 0 25px);
+  }
+}

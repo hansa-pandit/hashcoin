@@ -1,0 +1,28 @@
+.search-block-form {
+  position: relative;
+  input[type= "search"] {
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    padding: 8px 40px 8px 20px;
+    min-width: 230px;
+  }
+
+  input[type= "submit"] {
+    @include rem('right', 10px);
+    min-width: auto;
+    padding: 0;
+    position: absolute;
+    background: transparent;
+    border: none;
+    height: 40px;
+    color: $pink;
+    transition: $transition;
+    &:hover {
+      color: $yellow;
+      transition: $transition;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}

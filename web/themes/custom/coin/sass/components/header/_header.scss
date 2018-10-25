@@ -1,0 +1,117 @@
+.region-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include rem('padding', 100px 0 15px 0);
+
+  @include media-breakpoint-up(lg) {
+    @include rem('padding', 10px 0 20px 0);
+  }
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+
+  .search-block-form{
+    flex: 1 1 auto;
+    text-align: right;
+  }
+}
+
+.region-header-bottom {
+  border-top: 1px solid $grey;
+  background: $white;
+  transition: $transition;
+}
+
+.block-system-branding-block {
+  text-align: center;
+  @include media-breakpoint-down(md) {
+    @include rem('top', 8px);
+    position: absolute;
+    width: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  @include media-breakpoint-up("lg") {
+    flex: 1 1 auto;
+  }
+  img{
+    transition: $transition;
+    @include rem("max-width", 200px);
+
+    @include media-breakpoint-up("xl") {
+      @include rem("max-width", 350px);
+    }
+
+    &:hover {
+      opacity: 0.8;
+      transition: $transition;
+    }
+  }
+}
+.hashcoin {
+  &__social-icons {
+    flex: 1 1 auto;
+    a{
+      border: 1px solid $grey;
+      border-radius: 50%;
+      line-height: 40px;
+      margin: 0 4px;
+      font-size: 14px;
+      width: 40px;
+      height: 40px;
+      transition: $transition;
+      text-align: center;
+      &:first-child{
+        margin-left: 0;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      &:hover{
+        color: #fff;
+        transition: $transition;
+      }
+    }
+
+
+    .icon-fb{
+      color: #507cbe;
+      &:hover{
+        background-color: #507cbe;
+        border: 1px solid #507cbe;
+      }
+    }
+
+    .icon-twitter{
+      color: #00abef;
+      &:hover{
+        background-color: #00abef;
+        border: 1px solid #00abef;
+      }
+    }
+    .icon-google{
+      color: #d93e2d;
+      &:hover{
+        background-color: #d93e2d;
+        border: 1px solid #d93e2d;
+      }
+    }
+    .icon-youtube{
+      color: #d12121;
+      &:hover{
+        background-color: #d12121;
+        border: 1px solid #d12121;
+      }
+    }
+    .icon-linkedin{
+      color: #3371b7;
+      &:hover{
+        background-color: #3371b7;
+        border: 1px solid #3371b7;
+      }
+    }
+  }
+}

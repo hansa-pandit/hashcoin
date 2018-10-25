@@ -1,0 +1,107 @@
+.view-testimonials {
+  @include create-container;
+  padding: 75px 0;
+
+  @include media-breakpoint-up(lg) {
+    padding: 150px 0;
+  }
+  .view-content {
+    @include create-container();
+  }
+
+  .slick-slide {
+    &:nth-child(3n + 1) {
+      .hc-testimonials {
+        &__image {
+          &:after {
+            background-color: $yellow;
+          }
+        }
+        &__first-name {
+          color: $pink;
+        }
+      }
+    }
+    &:nth-child(3n + 2) {
+      .hc-testimonials {
+        &__image {
+          &:after {
+            background-color: $coral;
+          }
+        }
+        &__first-name {
+          color: $coral;
+        }
+      }
+    }
+    &:nth-child(3n + 3) {
+      .hc-testimonials {
+        &__image {
+          &:after {
+            background-color: $pink;
+          }
+        }
+        &__first-name {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+.hc-testimonials {
+  &__wrapper {
+    text-align: center;
+  }
+  &__image {
+    @include rem('width', 250px);
+    @include rem('height', 250px);
+    margin: 0 auto;
+    border-radius: 50%;
+    position: relative;
+    @include media-breakpoint-up(ism) {
+      @include rem('width', 300px);
+      @include rem('height', 300px);
+    }
+
+
+    &:after {
+      content: "\f10d";
+      font-family: 'Font Awesome\ 5 Free';
+      font-size: 30px;
+      text-align: center;
+      line-height: 80px;
+      font-style: normal;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      color: $white;
+      background-color: $yellow;
+      font-weight: $boldest-font;
+    }
+    img {
+      border-radius: 50%;
+    }
+  }
+  &__first-name {
+    @include title-prefix;
+    margin: 40px 0 0;
+  }
+  &__last-name {
+    @include hc-title-h3($black);
+  }
+  &__description {
+    margin: 0 auto;
+    @include media-breakpoint-up(lg) {
+      max-width: 65%;
+    }
+
+    p {
+      @include blockquote;
+      @include rem('margin', 10px 0 25px)
+    }
+  }
+}

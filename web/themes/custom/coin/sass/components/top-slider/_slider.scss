@@ -1,0 +1,107 @@
+.view-top-slider {
+  line-height: 0;
+  .slick-arrow {
+    display: none ;
+  }
+  .slick-dots {
+
+    @include media-breakpoint-up("lg") {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: auto;
+      padding: 20px;
+    }
+
+      @include media-breakpoint-down("md") {
+      background: $black;
+      padding: 0 20px 30px 20px;
+      position: relative;
+      bottom: 2px;
+    }
+
+    li {
+
+      @include media-breakpoint-up("lg") {
+        display: block;
+      }
+      button {
+        &:before {
+          color: $white;
+        }
+      }
+    }
+  }
+  .slick-slider {
+    margin-bottom: 0 !important; // to be changed later
+  }
+}
+
+.hc-top-slider {
+  position: relative;
+  @include media-breakpoint-down("md") {
+    background: $black;
+  }
+  &__image {
+    max-height: 650px;
+    overflow: hidden;
+  }
+  &__text {
+    @include create-container;
+    padding: 40px 20px;
+
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      padding: 0 20px;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+
+    @include media-breakpoint-down("md") {
+      text-align: center;
+    }
+  }
+  .left {
+    @include media-breakpoint-up("lg") {
+      text-align: left;
+    }
+  }
+  .right {
+    @include media-breakpoint-up("lg") {
+      text-align: right;
+    }
+  }
+  &__description {
+    @include hc-title-h2($white);
+    line-height: .8;
+    span {
+      display: block;
+    }
+  }
+  &__description1 {
+    font-weight: $thin;
+  }
+  &__description2 {
+    font-weight: $semibold;
+  }
+  &__description3 {
+    font-weight: $bold;
+  }
+  &__link {
+    a {
+      @include hc-button($pink);
+      margin-top: 40px;
+      font-weight: $extrabold;
+      @include media-breakpoint-up("lg") {
+        margin-top: 50px;
+      }
+    }
+  }
+
+
+
+}

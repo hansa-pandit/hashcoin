@@ -1,0 +1,44 @@
+#block-joinus {
+  background-position: right center;
+  background-size: cover;
+  @include media-breakpoint-up(lg) {
+    background-position: center center;
+  }
+  h2 {
+    display: none;
+  }
+
+  .field--name-field-content {
+    @include create-container;
+  }
+  .paragraph--type--title-description-link {
+    @include make-col(12);
+    @include rem('padding', 75px 0);
+
+
+    @include media-breakpoint-up(md) {
+      @include make-col(8);
+      margin-left: auto;
+      margin-right: 0;
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(5);
+      @include rem('padding', 150px 0);
+    }
+  }
+  .field--name-field-title-prefix {
+    @include title-prefix();
+  }
+
+  .field--name-field-title {
+    @include hc-title-h3($black);
+    line-height: .8;
+  }
+  .field--name-field-link {
+    @include rem('margin-top', 15px);
+
+    a {
+      @include hc-button($pink);
+    }
+  }
+}

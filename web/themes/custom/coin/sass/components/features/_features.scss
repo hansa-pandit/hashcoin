@@ -1,0 +1,64 @@
+#block-features {
+  background-position: center center;
+  background-size: cover;
+  background-color: $light-grey;
+  @include media-breakpoint-down(md) {
+    background: $light-grey;
+  }
+
+  .field--name-field-features {
+    @include create-container();
+    @include rem('padding', 75px 0);
+    @include media-breakpoint-up(lg) {
+      @include rem('padding', 150px 20px);
+    }
+  }
+  .row {
+    justify-content: space-between;
+    > .field__item {
+      @include make-col(12);
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
+      @include media-breakpoint-up(lg) {
+        @include make-col(4);
+      }
+    }
+
+    &:nth-child(2) {
+      > .field__item {
+        @include media-breakpoint-up(lg) {
+          @include make-col(3);
+        }
+      }
+      .fontawesome-icon {
+        color: $coral;
+      }
+    }
+    &:last-child {
+      .fontawesome-icon {
+        color: $yellow;
+      }
+    }
+  }
+  .paragraph--type--features {
+    @include rem('max-width', 260px);
+    @include rem('margin', 15px auto);
+
+    text-align: center;
+  }
+  .fontawesome-icon {
+    @include rem('font-size', 30px);
+    color: $pink;
+  }
+  .field--name-field-feature-title {
+    @include hc-title-h4($black);
+  }
+  .field--name-field-feature-description {
+    @include rem('font-size', 16px);
+    line-height: 1.8;
+  }
+  .field--name-field-background-image {
+    display: none;
+  }
+}

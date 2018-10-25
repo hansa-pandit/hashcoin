@@ -1,0 +1,90 @@
+#block-reachus {
+  @include rem('padding', 100px 0)
+  background: url('../compress-images/contact.jpg')no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  h2 {
+    @include hc-title-h3($black);
+    position: relative;
+    text-align: center;
+
+    &:before {
+      @include title-prefix;
+      content: 'Get a';
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: -15px auto 0;
+    }
+  }
+
+  .field--name-field-contact- {
+    @include create-container;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+  }
+  .js-form-item-full-name,
+  .js-form-item-email-address,
+  .js-form-item-subject {
+    flex: 0 0 100%;
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+      @include rem('max-width', 215px);
+      flex: 0 0 33%;
+
+    }
+    @include media-breakpoint-up(lg) {
+      @include rem('max-width', 290px);
+    }
+    @include media-breakpoint-up(xl) {
+      @include rem('max-width', 360px);
+    }
+    input {
+      width: 100%;
+    }
+  }
+  .js-form-item-question,
+  .form-actions{
+    flex: 0 1 100%;
+    position: relative;
+
+  }
+
+  .form-actions {
+    text-align: center;
+    .form-submit {
+      width: auto;
+      margin: 20px auto 0;
+    }
+  }
+  .js-form-item:before {
+    font-family: Font Awesome\ 5 free;
+    color: $pink;
+    position: absolute;
+    height: 40px;
+    line-height: 40px;
+    left: 20px;
+  }
+
+  .js-form-item-full-name:before {
+    content: '\f007';
+  }
+  .js-form-type-email:before {
+    content: '\f0e0';
+  }
+  .js-form-item-subject:before {
+    content: '\f0c6';
+    font-weight: $semibold;
+  }
+  .js-form-item-question:before {
+    content: '\f007';
+  }
+}
