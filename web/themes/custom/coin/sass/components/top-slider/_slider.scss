@@ -99,9 +99,38 @@
       @include media-breakpoint-up("lg") {
         margin-top: 50px;
       }
+      &:hover {
+        background: $yellow;
+      }
     }
   }
 
+  .coral {
+    a {
+      background: $coral;
+      &:hover {
+        background: $yellow ;
+      }
+    }
+  }
+
+  .pink {
+    a {
+      background: $pink;
+      &:hover {
+        background: $yellow ;
+      }
+    }
+  }
+
+  .yellow {
+    a {
+      background: $yellow;
+      &:hover {
+        background: $pink ;
+      }
+    }
+  }
 
 
 }

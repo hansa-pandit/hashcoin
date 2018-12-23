@@ -1,0 +1,15 @@
+.sidebar {
+  .search-block-form {
+    form {
+      position: relative;
+    }
+    input[type=search] {
+      background: $light-grey;
+      width: 100%;
+    }
+    input[type=submit] {
+       position: absolute;
+       top: 0;
+    }
+  }
+}

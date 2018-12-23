@@ -29,10 +29,10 @@
       if ($(window).width() > 991) {
 
           $('li.menu-item--expanded').hover(function() {
-          $(this).find('ul.menu').stop(true, true).delay(200).fadeIn(500);
+            $(this).find('ul.menu').stop(true, true).delay(200).fadeIn(500);
 
-        }, function() {
-          $(this).find('ul.menu').stop(true, true).delay(200).fadeOut(500);
+          }, function() {
+            $(this).find('ul.menu').stop(true, true).delay(200).fadeOut(500);
         });
       }
     }
@@ -109,7 +109,8 @@
           slidesToShow: 1,
           slidesToScroll: 1,
           speed: 1000,
-          arrows: false
+          arrows: false,
+          dots: true
         });
       }
       if ($('.view-partners').length > 0) {
@@ -122,9 +123,9 @@
           focusOnSelect:true,
           centerMode: true,
 
-/*
-          centerPadding: '40px',
-*/
+
+          centerPadding: '0px',
+
           responsive: [
 
             {
@@ -196,7 +197,21 @@
           }
         });
       }
-
+      if ($('.hc-blogs__listing-wrapper').length) {
+        $('.hc-blogs__listing-wrapper').each(function () {
+          if ($(this).find('.hc-blogs__image img').length) {
+            var imgSrc = $(this)
+                .find('.hc-blogs__image img')
+                .attr('src');
+            $(this)
+                .find('.hc-blogs__image img')
+                .remove();
+            $(this)
+                .find('.hc-blogs__image')
+                .css('background-image', 'url(' + imgSrc + ')');
+          }
+        });
+      }
     }
   };
 })(jQuery, Drupal);

@@ -1,0 +1,36 @@
+.view-display-id-block_3 {
+  .hc-blogs {
+    &__recent-posts-wrapper {
+      @include rem('margin', 15px 0);
+      display: flex;
+      align-items: center;
+    }
+    &__image {
+      @include rem('width', 85px);
+      @include rem('height', 85px);
+
+      background-size: 100%;
+    }
+    &__title-date {
+      @include rem('padding', 15px);
+
+      a {
+        @include rem('font-size', 16px);
+        font-weight: $semibold;
+        color: $black;
+      }
+
+
+    }
+    &__date {
+      @include rem('font-size', 16px);
+      font-weight: $semibold;
+      color: $pink;
+      margin-top: 4px;
+      svg {
+        display: none;
+      }
+
+    }
+  }
+}

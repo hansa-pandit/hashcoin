@@ -1,0 +1,8 @@
+.sidebar {
+  .simplenews-subscriber-form {
+    input[type=submit] {
+      @include rem('padding', 15px);
+
+    }
+  }
+}

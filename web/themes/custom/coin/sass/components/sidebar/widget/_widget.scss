@@ -1,0 +1,25 @@
+.view-id-widget  {
+  .views-content {
+
+  /*  @include media-breakpoint-down(ism) {
+      @include rem('max-width', 400px);
+    }*/
+
+  }
+  .views-row {
+   display: inline-block;
+
+    a {
+      line-height: 0;
+      @include media-breakpoint-down(lg) {
+        @include rem('width', 130px);
+
+      }
+    }
+  }
+  .field-content {
+    line-height: 0;
+  }
+
+
+}

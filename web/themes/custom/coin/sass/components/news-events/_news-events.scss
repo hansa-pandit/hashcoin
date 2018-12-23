@@ -1,4 +1,5 @@
-.block-views-blocknews-and-events-block-1 {
+.block-views-blocknews-and-events-block-1,
+.view-display-id-block_5{
   @include create-container;
   @include rem('padding', 75px 5px 0 5px);
 
@@ -182,21 +183,16 @@
       @include rem('padding', 0 40px);
       @include rem('margin', 50px auto );
     }
-    &__title {
+    /*&__title {
       @include rem('margin-bottom', 20px );
 
       a {
         @include hc-title-h4($black);
       }
     }
+*/
 
 
-    &__teaser-description {
-      @include rem('font-size', 16px);
-
-      line-height: 1.8;
-
-    }
     &__details {
       display: flex;
       border-top: 1px solid $border-grey;
@@ -258,5 +254,20 @@
   .draggable {
     width: calc(100% - 60px);
     margin: 0 auto;
+  }
+}
+
+.hc-blogs {
+  &__teaser-description {
+    @include rem('font-size', 16px);
+
+    line-height: 1.8;
+  }
+  &__title {
+    @include rem('margin-bottom', 20px );
+
+    a {
+      @include hc-title-h4($black);
+    }
   }
 }

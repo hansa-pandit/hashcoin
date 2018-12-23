@@ -15,6 +15,7 @@
 
   }
   .menu-item {
+    white-space: nowrap;
     @include media-breakpoint-down(md) {
       padding: 10px;
     }
@@ -58,7 +59,11 @@
           }
         }
         .is-active {
-          color: $white;
+          @include media-breakpoint-down(md) {
+
+            color: $white;
+
+          }
         }
       }
     }

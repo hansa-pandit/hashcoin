@@ -5,7 +5,6 @@ description: 'Demo custom theme for hashcoin.'
 package: custom
 core: 8.x
 libraries:
-libraries:
   - core/jquery
   - coin/preloader
   - core/drupal
@@ -18,7 +17,8 @@ libraries:
 regions:
   header_top: 'Header top'
   header_bottom: 'Header Bottom'
-  main_top: 'Main top'
+  top_banner: 'Top banner'
+  top_slideshow: 'Top slideshow'
   content: 'Content'
   left_sidebar: 'Left sidebar'
   right_sidebar: 'Right sidebar'

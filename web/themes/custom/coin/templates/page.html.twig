@@ -56,28 +56,31 @@
 
     </header>
     <main class="main-wrapper">
-      {% if page.main_top %}
-        {{ page.main_top }}
+      {% if page.top_banner %}
+        {{ page.top_banner }}
+      {% endif %}
+      {% if page.top_slideshow %}
+        {{ page.top_slideshow }}
       {% endif %}
       {% if page.left_sidebar and page.content %}
-        <div class="container">
+        <div class="container sidebar">
           <div class="row">
-            <div class="col-md-4">
-              {{ page.left-sidebar }}
+            <div class="col-md-5 col-lg-4">
+              {{ page.left_sidebar }}
             </div>
-            <div class="col-md-8">
+            <div class="col-md-7 col-lg-8">
               {{ page.content }}
             </div>
           </div>
         </div>
       {% elseif page.right_sidebar and page.content %}
-        <div class="container">
+        <div class="container sidebar">
           <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7 col-lg-8">
               {{ page.content }}
             </div>
-            <div class="col-md-4">
-              {{ page.right-sidebar }}
+            <div class="col-md-5 col-lg-4">
+              {{ page.right_sidebar }}
             </div>
           </div>
         </div>

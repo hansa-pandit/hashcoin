@@ -1,0 +1,73 @@
+.paragraph--type--get-in-touch {
+  a {
+    @include rem('line-height', 60px);
+    @include rem('margin-bottom', 10px);
+    @include rem('font-size', 12px);
+
+    display: block;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: $semibold;
+    transition: $transition;
+
+    &:hover {
+      opacity: .8;
+      transition: $transition;
+    }
+  }
+  h2 {
+    margin-top: 0;
+  }
+  .fontawesome-icons {
+    @include rem('font-size', 14px);
+
+    display: inline-block;
+  }
+
+  .icon {
+    @include rem('width', 56px);
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .followers {
+    float: right;
+    @include rem('padding-right', 10px);
+
+  }
+  .link-title {
+    @include rem('padding-left', 10px);
+
+  }
+
+  .facebook {
+    background: $facebook-blue;
+  }
+  .twitter {
+    background: $twitter-blue;
+  }
+  .google-plus {
+    background: $google-red;
+  }
+
+  .instagram {
+    background: $insta-blue;
+  }
+
+  .youtube {
+    background: $youtube-red;
+  }
+  .soundcloud {
+    background: $soundcloud-orange;
+  }
+  .dribble {
+    background: $dribble-pink;
+  }
+  .post {
+    background: $post-grey;
+  }
+  .comments {
+    background: $black;
+  }
+
+}

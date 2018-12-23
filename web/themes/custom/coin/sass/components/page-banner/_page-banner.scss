@@ -1,0 +1,51 @@
+.region-top-banner {
+  @include rem('padding', 65px 0);
+  position: relative;
+  background-image: url("../images/breadcrumbs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: $white;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, #fab915, #bf3654);
+    opacity: .6;
+  }
+  a {
+    color: $white;
+    transition: $transition;
+    &:hover{
+      color: $yellow;
+      transition: $transition;
+
+    }
+  }
+
+  h1 {
+    @include hc-title-h3($white);
+  }
+  li {
+    @include rem('padding', 0 18px);
+    @include rem('line-height', 30px);
+
+    font-weight: $boldest-font;
+    text-transform: uppercase;
+    &:before {
+      display: none;
+    }
+  }
+  .block-page-title-block {
+    @include create-container;
+    position: relative;
+  }
+  .block-system-breadcrumb-block {
+    @include create-container;
+    position: relative;
+  }
+}

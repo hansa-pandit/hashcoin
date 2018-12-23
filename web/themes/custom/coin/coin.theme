@@ -19,7 +19,17 @@ function coin_form_search_block_form_alter(&$form, &$form_state) {
 }*/
 
 
-function coin_form_search_block_form_alter(&$form, &$form_state) {
+function coin_form_search_block_form_alter(&$form, &$form_state, $form_id) {
   $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
   $form['actions']['submit']['#attributes']['class'][] = 'search-button';
+  $form['keys']['#attributes']['placeholder'] = t('Search');
+
+
+}
+
+
+function coin_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'search-block-form--2') {
+    $form['keys']['und'][0]['value']['#attributes']['placeholder'] = t('Hansa');
+  }
 }
